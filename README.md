@@ -1,0 +1,2 @@
+# GlobalPokemonIndex
+ポケモン図鑑
