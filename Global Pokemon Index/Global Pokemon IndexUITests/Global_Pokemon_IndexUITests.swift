@@ -2,7 +2,7 @@
 //  Global_Pokemon_IndexUITests.swift
 //  Global Pokemon IndexUITests
 //
-//  Created by 渡辺 航 on 2020/10/11.
+//  Created by Ko.W on 2020/10/11.
 //
 
 import XCTest
