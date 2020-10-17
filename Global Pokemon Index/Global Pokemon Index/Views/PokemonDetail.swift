@@ -11,7 +11,7 @@ struct PokemonDetail: View {
     var body: some View {
         HStack {
             PokemonImage(image: Image("025"))
-            VStack(alignment: .leading, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
+            VStack(alignment: .leading, spacing: nil, content: {
                 Text("ピカチュウ")
                     .font(.largeTitle)
                     .frame(alignment: .leading)
