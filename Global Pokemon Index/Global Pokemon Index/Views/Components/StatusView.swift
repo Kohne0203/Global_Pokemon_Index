@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct StatusView: View {
-    let MAXIMUM_VALUE: Int = 255
+    static let maxValue: Int = 255
+    static let maxLength = 200
     var status: String
 //    var value: Int
-    func valueLength(value: Int) -> CGFloat {
-        let maxLength = Double(200/Double(self.MAXIMUM_VALUE))
-        return CGFloat(Double(value) * maxLength)
+    let valueLength = {(value: Int) -> CGFloat in
+        let lengthRate = Double(maxLength)/Double(maxValue)
+        return CGFloat(Double(value) * Double(lengthRate))
     }
     
     var body: some View {
@@ -26,11 +27,11 @@ struct StatusView: View {
                     .frame(height: 10)
                     .foregroundColor(Color(red: 236, green: 233, blue: 230))
                 Rectangle()
-                    .frame(width: valueLength(value: 130), height: 10)
+                    .frame(width: valueLength(130), height: 10)
                     .foregroundColor(.pink)
             }
                 .frame(width: 200, height: 30, alignment: .center)
-            Text(self.MAXIMUM_VALUE.description)
+            Text(Self.maxValue.description)
                 .bold()
         }
             .padding()
