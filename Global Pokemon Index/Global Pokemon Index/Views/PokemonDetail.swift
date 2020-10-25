@@ -9,17 +9,23 @@ import SwiftUI
 
 struct PokemonDetail: View {
     var body: some View {
-        HStack {
-            PokemonImage(image: Image("025"))
-            VStack(alignment: .leading, spacing: nil, content: {
-                Text("ピカチュウ")
-                    .font(.largeTitle)
-                    .frame(alignment: .leading)
-                    .padding(.bottom)
-                Text("タイプ：電気")
-                Text("分類："+"ねずみポケモン")
-            })
+        VStack{
+            HStack {
+                PokemonImage(image: Image("025"))
+                VStack(alignment: .leading, spacing: nil, content: {
+                    Text("ピカチュウ")
+                        .font(.largeTitle)
+                        .frame(alignment: .leading)
+                        .padding(.bottom)
+                    Text("タイプ：電気")
+                    Text("分類："+"ねずみポケモン")
+                })
+                
+            }
+            BasicAbilityValueCard()
+                
         }
+        
         Spacer()
     }
 }
