@@ -20,7 +20,7 @@ struct BasicAbilityValueCard: View {
     ]
     
     var body: some View {
-        VStack{
+        VStack(spacing: 0){
             ForEach(0..<StatusName.count) { index in
                 StatusView(status: StatusName[index])
                     .frame(height: 50)
@@ -32,5 +32,6 @@ struct BasicAbilityValueCard: View {
 struct BasicAbilityValueCard_Previews: PreviewProvider {
     static var previews: some View {
         BasicAbilityValueCard()
+            .previewLayout(.sizeThatFits)
     }
 }
