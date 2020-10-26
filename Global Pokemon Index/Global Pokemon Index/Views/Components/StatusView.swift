@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StatusView: View {
     static let maxValue: Int = 255
-    static let maxLength = 200
+    static let maxLength: CGFloat = 180
     var status: String
 //    var value: Int
     let valueLength = {(value: Int) -> CGFloat in
@@ -30,7 +30,7 @@ struct StatusView: View {
                     .frame(width: valueLength(130), height: 10)
                     .foregroundColor(.pink)
             }
-                .frame(width: 200, height: 30, alignment: .center)
+            .frame(width: Self.maxLength, height: 30, alignment: .center)
             Text(Self.maxValue.description)
                 .bold()
         }
