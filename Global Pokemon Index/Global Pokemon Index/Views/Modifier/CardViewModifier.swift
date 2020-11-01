@@ -12,8 +12,12 @@ struct CardViewModifier: ViewModifier {
     let radius: CGFloat
     func body(content: Content) -> some View {
         content
-            .padding(.vertical, 16)
-            .padding(.horizontal, 8)
+            .padding(EdgeInsets(
+                top: 10,
+                leading: 10,
+                bottom: 10,
+                trailing: 10
+            ))
             .background(Color.white)
             .cornerRadius(20)
             .shadow(color: color, radius: radius, x: 4, y: 4 )
