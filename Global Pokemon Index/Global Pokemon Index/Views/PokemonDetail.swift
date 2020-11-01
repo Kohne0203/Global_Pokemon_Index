@@ -10,20 +10,18 @@ import SwiftUI
 struct PokemonDetail: View {
     var body: some View {
         VStack{
-            HStack {
-                PokemonImage(image: Image("025"))
-                VStack(alignment: .leading, spacing: nil, content: {
-                    Text("ピカチュウ")
-                        .font(.largeTitle)
-                        .frame(alignment: .leading)
-                        .padding(.bottom)
-                    Text("タイプ：電気")
-                    Text("分類："+"ねずみポケモン")
-                })
-                
-            }
+            PokemonBasicData()
+            .toCard()
+            CategoryHead(headline: "種族値")
+                // TODO カテゴリー側のコンポネントで調整する
+                .padding(EdgeInsets(
+                    top: 10,
+                    leading: 0,
+                    bottom: 10,
+                    trailing: 130
+                ))
             BasicAbilityValueCard()
-                
+                .toCard()
         }
         
         Spacer()
