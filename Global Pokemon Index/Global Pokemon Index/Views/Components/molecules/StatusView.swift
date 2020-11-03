@@ -30,7 +30,7 @@ struct StatusView: View {
                     .frame(width: valueLength(130), height: 10)
                     .foregroundColor(.pink)
             }
-            .frame(width: Self.maxLength, height: 30, alignment: .center)
+                .frame(width: Self.maxLength, height: 30, alignment: .center)
             Text(Self.maxValue.description)
                 .bold()
         }
