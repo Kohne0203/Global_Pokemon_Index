@@ -17,32 +17,30 @@ struct EvolutionFigureCard: View {
                 Image("172MS")
                 Text("ピチュー")
             }
+            Image("blueArrow")
+                .resizable()
+                .frame(width: 30, height: 30)
             VStack {
                 Image("025MS")
                 Text("ピカチュウ")
             }
+            Image("blueArrow")
+                .resizable()
+                .frame(width: 30, height: 30)
             VStack {
                 Image("026MS")
                 Text("ライチュウ")
             }
         }
+        .padding(EdgeInsets(
+            top: 0,
+            leading: 10,
+            bottom: 0,
+            trailing: 10
+        ))
     }
 }
 
-//enum Pikachu: String {
-//    case 0
-//    case 1
-//    case 2
-//    
-//    var name: String{
-//        switch self {
-//            case .0:"172MS",
-//            case .1:"025MS",
-//            case .2:"026MS"
-//        }
-//    }
-//    
-//}
 
 struct EvolutionFigureCard_Previews: PreviewProvider {
     static var previews: some View {

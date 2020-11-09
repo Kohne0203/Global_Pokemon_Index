@@ -44,6 +44,16 @@ struct PokemonDetail: View {
                         bottom: 0,
                         trailing: 20
                     ))
+            CategoryHead(headline: "進化系図")
+                // TODO カテゴリー側のコンポネントで調整する
+                .padding(EdgeInsets(
+                    top: 10,
+                    leading: 0,
+                    bottom: 10,
+                    trailing: 130
+                ))
+            EvolutionFigureCard()
+                .toCard()
         }
     }
 }
