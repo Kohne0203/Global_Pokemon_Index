@@ -10,11 +10,9 @@ import SwiftUI
 struct CategoryHead: View {
     var headline: String
     var body: some View {
-        HStack {
-            Text(headline)
-                .fontWeight(.heavy)
-        }
-        .padding(.trailing, 180)
+        Text(headline)
+            .fontWeight(.heavy)
+            .padding(.trailing, 180)
     }
 }
 
